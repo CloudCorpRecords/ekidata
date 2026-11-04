@@ -1,0 +1,41 @@
+{
+  "name": "@reneturcios/ekidata",
+  "version": "0.1.0",
+  "description": "Japanese station, municipality, accessibility, hazard and alert data from official sources, in English: a local bridge to the hosted Gachi Japan data MCP service. One bin serves a small CLI and a stdio MCP server.",
+  "mcpName": "io.github.CloudCorpRecords/ekidata",
+  "type": "module",
+  "bin": {
+    "ekidata": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "server.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudCorpRecords/ekidata.git"
+  },
+  "homepage": "https://github.com/CloudCorpRecords/ekidata#readme",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1",
+    "zod": "^4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsx": "^4",
+    "typescript": "^5"
+  }
+}
